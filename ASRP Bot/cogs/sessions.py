@@ -11,17 +11,18 @@ class SessionCog(commands.Cog):
 
     @app_commands.command(name="server-status", description="Change the server status!")
     async def session_manager(self, interaction: Interaction):
-        print("activated")
         from config import session_status, GREEN_SESSION_IMG, RED_SESSION_IMG
 
         if session_status == "ssu":
             img = GREEN_SESSION_IMG
+            emoji = "<:ServerSSU:1316165992727973948>"
         elif session_status == "ssd":
             img = RED_SESSION_IMG
+            emoji = "<:ServerSSD:1316165994124804116>"
 
         embed = discord.Embed(
             title="Session Manager Embed",
-            description=f"\n### __:Server{session_status.upper()}: | Current Status: {session_status.upper()}__\n\n",
+            description=f"\n### __{emoji} | Current Status: {session_status.upper()}__\n\n",
             color=discord.Color.from_str(get_session_color(session_status))
         )
 
