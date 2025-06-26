@@ -20,7 +20,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerSSU: | The server startup message has been confirmed!__",
+                title="__<:ServerSSU:1316165992727973948> | The server startup message has been confirmed!__",
                 color=discord.Color.from_str(colors.GREEN)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -31,7 +31,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerSSD: | The server shutdown message has been confirmed!__",
+                title="__<:ServerSSD:1316165994124804116> | The server shutdown message has been confirmed!__",
                 color=discord.Color.from_str(colors.RED)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -42,7 +42,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerLLP: | The Low Player Ping message has been confirmed!__",
+                title="__<:ServerLLP:1316165989012082708> | The Low Player Ping message has been confirmed!__",
                 color=discord.Color.from_str(colors.YELLOW)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -53,7 +53,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerRestart: | The Server Restart message has been confirmed!__",
+                title="__<:ServerRestart:1386846452805931021> | The Server Restart message has been confirmed!__",
                 color=discord.Color.from_str(colors.ORANGE)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -64,7 +64,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerCrash: | The Server Crash message has been confirmed!__",
+                title="__<:ServerCrash:1316165991561957447> | The Server Crash message has been confirmed!__",
                 color=discord.Color.from_str(colors.GREY)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -75,7 +75,7 @@ class FinalLogConfirmation(discord.ui.View):
 
             edited_embed = discord.Embed(
                 description=original_content,
-                title="__:ServerUpdate: | The Server Update message has been confirmed!__",
+                title="__<:ServerUpdate:1316165989963927645> | The Server Update message has been confirmed!__",
                 color=discord.Color.from_str(colors.BLUE)
             )
             edited_embed.set_footer(text=f"Confirmed by: {interaction.user.nick}", icon_url=interaction.user.avatar)
@@ -113,7 +113,7 @@ class SessionConfirmationView(discord.ui.View):
                                                                        embed=embed, delete_after=1800)
 
                 log_embed = discord.Embed(
-                    title="<:ServerSSU:1316165992727973948> | __The Low Player Ping has been sent, please confirm below!__",
+                    title="<:ServerLLP:1316165989012082708> | __The Low Player Ping has been sent, please confirm below!__",
                     description=f"> - **Sent By:** <@{interaction.user.id}>\n> - **Time Sent:** <t:{int(datetime.datetime.now().timestamp())}:R>\n> - **Action Done:** `LLP`",
                     color=discord.Color.from_str(colors.YELLOW)
                 )
@@ -206,7 +206,7 @@ class SessionConfirmationView(discord.ui.View):
         elif self.session_type == "update":
             try:
                 embed = discord.Embed(
-                    title="__<:ServerCrash:1316165991561957447> | PRC Update!__",
+                    title="__<:ServerUpdate:1316165989963927645> | PRC Update!__",
                     description=f"> - Our host game, ER:LC (Emergency Response: Liberty County) has **updated**! Feel free to join back and enjoy the new content with our code: **[ALASKA](https://policeroleplay.community/join?code=ALASKA&placeId=2534724415)**!",
                     color=discord.Color.from_str(colors.BLUE)
                 )
@@ -219,7 +219,7 @@ class SessionConfirmationView(discord.ui.View):
                 await self.bot.get_channel(SERVER_STATUS_CHANNEL).send("@her e", embed=embed, delete_after=1800)
 
                 log_embed = discord.Embed(
-                    title="<:ServerCrash:1316165991561957447>> | __The Server Update message has been sent, please confirm below!__",
+                    title="<:ServerUpdate:1316165989963927645> | __The Server Update message has been sent, please confirm below!__",
                     description=f"> - **Sent By:** <@{interaction.user.id}>\n> - **Time Sent:** <t:{int(datetime.datetime.now().timestamp())}:R>\n> - **Action Done:** `Update`",
                     color=discord.Color.from_str(colors.BLUE)
                 )
@@ -352,7 +352,7 @@ class SSDModal(discord.ui.Modal, title="SSD Reasoning"):
             await self.bot.get_channel(SERVER_STATUS_CHANNEL).send(embed=embed)
 
             log_embed = discord.Embed(
-                title="<:ServerSSU:1316165992727973948> | __The server has been shut down, please confirm below!__",
+                title="<:ServerSSD:1316165994124804116> | __The server has been shut down, please confirm below!__",
                 description=f"> - **Sent By:** <@{interaction.user.id}>\n> - **Time Sent:** <t:{int(datetime.datetime.now().timestamp())}:R>\n> - **Action Done:** `SSDed`\n"
                             f"\n**__SSD Information:__**\n> - **Reason:** {reason}\n> - **User(s) Requesting:** {user}\n> - **Other Staff In-Game:** {other_staff}\n> - **Used the Staff Request:** {melonly}\n> - **Anything Else:** {anything_else}",
                 color=discord.Color.from_str(colors.RED)
