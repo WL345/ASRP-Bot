@@ -109,8 +109,7 @@ class SessionConfirmationView(discord.ui.View):
                 embed.set_thumbnail(
                     url="https://media.discordapp.net/attachments/1182828263828103240/1183834014465925130/file-z2wbRRQ45BNH3lmnqqBb4L3M_1.png?ex=685c3c57&is=685aead7&hm=0e89fd025b1cddfef0950fb6665035e56fd576481c18d5034ea3d9d9cca1f922&format=webp&quality=lossless&width=810&height=810&")
 
-                await self.bot.get_channel(SERVER_STATUS_CHANNEL).send("@her e <@&1182908708821401631",
-                                                                       embed=embed, delete_after=1800)
+                await self.bot.get_channel(SERVER_STATUS_CHANNEL).send("@her e <@&1182908708821401631",embed=embed, delete_after=1800)
 
                 log_embed = discord.Embed(
                     title="<:ServerLLP:1316165989012082708> | __The Low Player Ping has been sent, please confirm below!__",
@@ -308,7 +307,7 @@ class SSUModal(discord.ui.Modal, title="SSUers"):
             # await self.interaction.edit_original_response(content="Successfully SSUed! Please check https://discord.com/channels/1182487341386969158/1187789091459305512 and complete any requests made.", embed=None, view=None)
             await self.interaction.edit_original_response(view=None)
             await interaction.response.send_message(
-                content="Successfully SSUed! Please check https://discord.com/channels/1182487341386969158/1187789091459305512 and complete any requests made.",
+                content="Successfully SSUed!",
                 ephemeral=True
             )
 
@@ -400,8 +399,6 @@ class SessionsMenu(discord.ui.View):
     )
     async def select_callback(self, interaction: discord.Interaction, select: discord.ui.Select):
         value = select.values[0]
-
-        print(value, self.session_status)
 
         if value == "ssu" and self.session_status == "ssu":
             await interaction.response.send_message("An SSU is already active!", ephemeral=True)
