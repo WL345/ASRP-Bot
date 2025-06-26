@@ -23,12 +23,12 @@ async def on_ready():
     except Exception as e:
         print(f"Error syncing commands: {e}")
 
-"""
+
 async def load_extensions():
     await bot.load_extension("cogs.sessions")
     await bot.load_extension("cogs.say")
-    await bot.load_extension("cogs.test")
-"""
+
+
 async def main():
     async with bot:
         await load_extensions()
