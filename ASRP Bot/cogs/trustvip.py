@@ -17,7 +17,7 @@ class TrustVIPCog(discord.ext.commands.Cog):
         ]
     )
     async def trustvip(self, interaction: discord.Interaction, user: discord.User, reason: str, trustvip: str):
-        print(f"{interaction.user.name} - <@{interaction.user.id}> - Used the trustVIP} command")
+        print(f"{interaction.user.name} - <@{interaction.user.id}> - Used the trustVIP command")
         if trustvip == "vip":
             if "Management Team" in interaction.user.roles or self.bot.get_guild(1182487341386969158).get_role(1355375890984341524) in interaction.user.roles:   # REMOVE BOT DEV
                 #  or discord.utils.get(self.bot.get_guild(1182487341386969158).roles, name="Bot Developer")
