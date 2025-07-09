@@ -1,0 +1,11 @@
+[sessions]
+message_id = 1392552954292080882
+
+[interactions]
+abc = "none"
+
+[interactions.ban-bolo]
+smeh = "adb"
+
+[interactions.chatmod]
+ada = "a"
