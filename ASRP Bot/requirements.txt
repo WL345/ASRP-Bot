@@ -1,4 +1,0 @@
-discord
-apscheduler
-nest_asyncio
-requests
