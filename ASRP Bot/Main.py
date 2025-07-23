@@ -3,7 +3,7 @@ from discord.ext import commands
 import config
 from utils.timed_events import initialize_reminders
 
-TOKEN = "MTM4NjgwMzA2NzMzNjUyMzgyNw.GN9sRG.Hobwkk-DXfYtAuER00gxO3KUOyV5YF9SbqDs10"
+TOKEN = "..."
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="--", intents=intents, activity=discord.Game(name="ER:LC - Alaska State Roleplay ../39"))
