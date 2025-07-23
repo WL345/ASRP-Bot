@@ -76,12 +76,11 @@ async def r(ctx, extension):
 
 async def load_extensions():
     await bot.load_extension('utils.interaction_handling')
-    await bot.load_extension("cogs.sessions")
-    # for fn in os.listdir("./cogs"):
-    #     if fn.endswith(".py"):
-    #         if fn.startswith("__"):
-    #             return
-    #         await bot.load_extension(f"cogs.{fn[:-3]}")
+    for fn in os.listdir("./cogs"):
+        if fn.endswith(".py"):
+            if fn.startswith("__"):
+                return
+            await bot.load_extension(f"cogs.{fn[:-3]}")
 
 async def main():
     async with bot:
